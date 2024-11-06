@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .login-box h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .login-box label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .login-box input, .login-box select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-box button:hover {
+            background-color: #0056b3;
+        }
+        #loginError {
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h1>Login</h1>
+        <label for="loginUserName">Username:</label>
+        <input type="text" id="loginUserName" required>
+        
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" required>
+        
+        <label for="userType">User Type:</label>
+        <select id="userType" required>
+            <option value="Farmer">Farmer</option>
+            <option value="Retailer">Retailer</option>
+            <option value="Distributor">Distributor</option>
+            <option value="Admin">Admin</option>
+        </select>
+        
+        <button onclick="login()">Login</button>
+        <div id="loginError"></div>
+    </div>
+
+    
+    <script src="login.js"></script>
+</body>
+</html>

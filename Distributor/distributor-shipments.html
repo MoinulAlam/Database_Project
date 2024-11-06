@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distributor - Shipments Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-title">
+            <h1>Shipments Management</h1>
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="distributor_dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="distributor-shipments.html">Shipments</a></li>
+                    <li><a href="distributor-vehicles.html">Vehicles</a></li>
+                    <li><a href="distributor-delivery-routes.html">Delivery Routes</a></li>
+                    <li><a href="/Home/index.html" class="login-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Shipments Overview Section -->
+    <section class="shipments-management">
+        <h2>Manage Shipments</h2>
+        <button class="btn open-modal" onclick="openShipmentForm()">Add New Shipment</button>
+        <div class="shipments-list" id="shipments-container">
+            <!-- Dynamic Shipment Cards will be added here -->
+        </div>
+    </section>
+
+    <!-- Modal for Adding or Editing Shipments -->
+    <div id="shipmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeShipmentForm()">&times;</span>
+            <h2 id="modal-title">Add New Shipment</h2>
+            <form id="shipmentForm">
+                <input type="hidden" id="shipmentIndex">
+
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required>
+
+                <label for="status">Status:</label>
+                <select id="status" name="status" required>
+                    <option value="active">Active</option>
+                    <option value="completed">Completed</option>
+                </select>
+
+                <label for="expectedDate">Expected Delivery Date:</label>
+                <input type="date" id="expectedDate" name="expectedDate" required>
+
+                <label for="vehicle">Assigned Vehicle:</label>
+                <input type="text" id="vehicle" name="vehicle" required>
+
+                <button type="button" class="submit-btn" onclick="saveShipment()">Save Shipment</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Inventory Management System | Distributor Portal</p>
+    </footer>
+
+    <script src="distributor-shipments.js"></script>
+</body>
+</html>

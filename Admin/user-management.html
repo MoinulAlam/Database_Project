@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <h1>User Management</h1>
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="admin-dashboard.html">Dashboard</a></li>
+                    <li><a href="user-management.html" class="active">User Management</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="login.html" class="login-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="dashboard">
+        <h2>Manage Users</h2>
+        <button class="btn open-modal" onclick="openUserForm()">Add User</button>
+        <div id="user-list" class="dashboard-cards">
+            <!-- User List populated by JavaScript -->
+        </div>
+    </section>
+
+    <div class="modal" id="user-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeUserForm()">&times;</span>
+            <h2>Add/Edit User</h2>
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" required>
+            <label for="userPassword">Password:</label>
+            <input type="password" id="userPassword" required> <!-- New password field -->
+            <label for="userRole">Role:</label>
+            <select id="userRole">
+                <option value="Farmer">Farmer</option>
+                <option value="Retailer">Retailer</option>
+                <option value="Distributor">Distributor</option>
+                <option value="Admin">Admin</option>
+            </select>
+            <label for="userStatus">Status:</label>
+            <select id="userStatus">
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select>
+            <button class="submit-btn" onclick="saveUser()">Save User</button>
+        </div>
+    </div>
+    
+
+    <footer>
+        <p>&copy; 2023 Inventory Management System | Admin Portal</p>
+    </footer>
+
+    <script src="user-management.js"></script>
+</body>
+</html>

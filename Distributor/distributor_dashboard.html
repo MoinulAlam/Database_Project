@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distributor Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-title">
+            <h1>Distributor Dashboard</h1>
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="distributor_dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="distributor-shipments.html">Shipments</a></li>
+                    <li><a href="distributor-vehicles.html">Vehicles</a></li>
+                    <li><a href="distributor-delivery-routes.html">Delivery Routes</a></li>
+                    <li><a href="/Home/index.html" class="login-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Dashboard Overview Section -->
+    <section class="dashboard">
+        <h2>Welcome, Distributor!</h2>
+        <div class="dashboard-overview">
+            <div class="card" id="shipments-overview">
+                <h3>Shipments Overview</h3>
+                <p id="active-shipments">Active Shipments: Loading...</p>
+                <p id="completed-shipments">Completed Shipments: Loading...</p>
+                <a href="distributor-shipments.html" class="btn">Manage Shipments</a>
+            </div>
+            <div class="card" id="vehicles-overview">
+                <h3>Vehicles Overview</h3>
+                <p id="available-vehicles">Available Vehicles: Loading...</p>
+                <p id="under-maintenance">Under Maintenance: Loading...</p>
+                <a href="distributor-vehicles.html" class="btn">Manage Vehicles</a>
+            </div>
+            <div class="card" id="routes-overview">
+                <h3>Delivery Routes</h3>
+                <p id="total-routes">Total Routes: Loading...</p>
+                <p id="in-progress-routes">Routes In Progress: Loading...</p>
+                <a href="distributor-routes.html" class="btn">Manage Routes</a>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2023 Inventory Management System | Distributor Portal</p>
+    </footer>
+
+    <script src="distributor-dashboard.js"></script>
+</body>
+</html>

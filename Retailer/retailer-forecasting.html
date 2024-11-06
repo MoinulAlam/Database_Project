@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retailer - Demand Forecasting</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-title">
+            <h1>Demand Forecasting</h1>
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="retailer-orders.html">Orders Management</a></li>
+                    <li><a href="retailer-forecasting.html">Demand Forecasting</a></li>
+                    <li><a href="customer-feedback.html">Customer Feedback</a></li>
+                    <li><a href="/Home/index.html" class="login-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Demand Forecasting Section -->
+    <section class="forecasting-management">
+        <h2>Forecast Demand</h2>
+        <form id="forecastForm">
+            <label for="historicalSales">Enter Historical Sales Data (comma-separated):</label>
+            <input type="text" id="historicalSales" name="historicalSales" required>
+
+            <button type="button" class="submit-btn" onclick="forecastDemand()">Forecast Demand</button>
+        </form>
+        
+        <ul id="resultsList"></ul>
+
+        <!-- Canvas for the Chart -->
+        <canvas id="salesChart" width="400" height="200" style="display:none;"></canvas>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Inventory Management System | Retailer Portal</p>
+    </footer>
+
+    <script src="demand-forecasting.js"></script>
+</body>
+</html>

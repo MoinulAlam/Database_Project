@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard - Contracts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-title">
+            <h1>Farmer Dashboard - Contracts</h1>
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="farmer-products.html">My Products</a></li>
+                    <li><a href="inventory.html">Inventory Contribution</a></li>
+                    <li><a href="contracts.html">Contracts</a></li>
+                    <li><a href="shipments.html">Shipments</a></li>
+                    <li><a href="/Home/index.html" class="login-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contracts Section -->
+    <section class="dashboard">
+        <h2>Contracts</h2>
+        <button class="btn open-modal">Add New Contract</button>
+        <div class="dashboard-cards" id="contracts-container">
+            <!-- Dynamic Contract Cards will be added here -->
+        </div>
+    </section>
+
+    <!-- Modal for Adding or Editing Contracts -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Add New Contract</h2>
+            <form id="contractForm">
+                <input type="hidden" id="contractIndex" name="contractIndex">
+                
+                <label for="contractName">Contract Name:</label>
+                <input type="text" id="contractName" name="contractName" required>
+
+                <label for="partnerName">Partner Name:</label>
+                <input type="text" id="partnerName" name="partnerName" required>
+
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" required>
+
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate" required>
+
+                <button type="button" class="submit-btn" id="saveContractBtn">Save Contract</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Inventory Management System | For Farmers</p>
+    </footer>
+
+    <script src="contracts-script.js"></script>
+</body>
+</html>

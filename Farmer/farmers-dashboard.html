@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-title">
+            <h1>Farmer Dashboard</h1>
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="farmer-products.html">My Products</a></li>
+                    <li><a href="inventory.html">Inventory Contribution</a></li>
+                    <li><a href="contracts.html">Contracts</a></li>
+                    <li><a href="shipments.html">Shipments</a></li>
+                    <li><a href="file:///C:/Users/moinu/OneDrive/Desktop/DBMS%20Project/Home/index.html" class="login-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Dashboard Main Section -->
+    <section class="dashboard">
+        <div class="dashboard-cards">
+            <div class="card">
+                <h3>My Products</h3>
+                <p>Manage your products and update details like crop type, price, and stock levels.</p>
+                <button class="btn">View Products</button>
+            </div>
+            <div class="card">
+                <h3>Inventory Contribution</h3>
+                <p>Monitor your inventory contributions to warehouses, including quantities and expiration dates.</p>
+                <button class="btn">View Inventory</button>
+            </div>
+            <div class="card">
+                <h3>Contracts</h3>
+                <p>View active contracts with warehouses and other partners for product supply.</p>
+                <button class="btn">View Contracts</button>
+            </div>
+            <div class="card">
+                <h3>Shipments</h3>
+                <p>Track outgoing shipments and view their status.</p>
+                <button class="btn">View Shipments</button>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Add / Edit Product</h2>
+                <form>
+                    <label for="productName">Product Name:</label>
+                    <input type="text" id="productName" name="productName" required>
+        
+                    <label for="cropType">Crop Type:</label>
+                    <input type="text" id="cropType" name="cropType" required>
+        
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" required>
+        
+                    <label for="price">Price per Unit:</label>
+                    <input type="number" id="price" name="price" required>
+        
+                    <button type="button" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Inventory Management System | For Farmers</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

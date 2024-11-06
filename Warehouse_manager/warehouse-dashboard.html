@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Manager Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-title">
+            <h1>Warehouse Manager Dashboard</h1>
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="warehouse-dashboard.html">Dashboard</a></li>
+                    <li><a href="warehouse-inventory.html">Manage Inventory</a></li>
+                    <li><a href="warehouse-shipments.html">Shipments</a></li>
+                    <li><a href="warehouse-employees.html">Manage Employees</a></li>
+                    <li><a href="warehouse-qc-reports.html">QC Reports</a></li>
+                    <li><a href="/Home/index.html" class="login-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Dashboard Main Section -->
+    <section class="dashboard">
+        <div class="dashboard-cards">
+            <div class="card">
+                <h3>Manage Inventory</h3>
+                <p>View and manage inventory levels, add new stock, and update existing items.</p>
+                <button class="btn">Go to Inventory</button>
+            </div>
+            <div class="card">
+                <h3>Shipments</h3>
+                <p>Track all incoming and outgoing shipments, view delivery status, and manage shipments.</p>
+                <button class="btn">View Shipments</button>
+            </div>
+            <div class="card">
+                <h3>Manage Employees</h3>
+                <p>Assign employees to tasks, manage roles, and update employee information.</p>
+                <button class="btn">Manage Employees</button>
+            </div>
+            <div class="card">
+                <h3>QC Reports</h3>
+                <p>View quality control reports, monitor product quality, and track inspection results.</p>
+                <button class="btn">View QC Reports</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Inventory Management System | For Warehouse Managers</p>
+    </footer>
+
+    <script src="warehouse-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Manager - QC Reports</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-title">
+            <h1>Warehouse Manager - QC Reports</h1>
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="warehouse-dashboard.html">Dashboard</a></li>
+                    <li><a href="warehouse-inventory.html">Manage Inventory</a></li>
+                    <li><a href="warehouse-shipments.html">Shipments</a></li>
+                    <li><a href="warehouse-employees.html">Manage Employees</a></li>
+                    <li><a href="warehouse-qc-reports.html">QC Reports</a></li>
+                    <li><a href="login.html" class="login-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- QC Reports Management Section -->
+    <section class="dashboard">
+        <h2>QC Reports</h2>
+        <button class="btn open-modal">Add New QC Report</button>
+        <div class="dashboard-cards" id="qc-reports-container">
+            <!-- Dynamic QC Report Cards will be added here -->
+        </div>
+    </section>
+
+    <!-- Modal for Adding or Editing QC Reports -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Add New QC Report</h2>
+            <form id="qcReportForm">
+                <input type="hidden" id="qcReportIndex" name="qcReportIndex">
+                
+                <label for="itemName">Item Name:</label>
+                <input type="text" id="itemName" name="itemName" required>
+
+                <label for="inspector">Inspector:</label>
+                <input type="text" id="inspector" name="inspector" required>
+
+                <label for="date">Date of Inspection:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="qualityStatus">Quality Status:</label>
+                <input type="text" id="qualityStatus" name="qualityStatus" required>
+
+                <label for="remarks">Remarks:</label>
+                <textarea id="remarks" name="remarks"></textarea>
+
+                <button type="button" class="submit-btn" id="saveQcReportBtn">Save QC Report</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Inventory Management System | For Warehouse Managers</p>
+    </footer>
+
+    <script src="warehouse-qc-reports.js"></script>
+</body>
+</html>

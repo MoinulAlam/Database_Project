@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Manager - Manage Inventory</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-title">
+            <h1>Warehouse Manager - Manage Inventory</h1>
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="warehouse-dashboard.html">Dashboard</a></li>
+                    <li><a href="warehouse-inventory.html">Manage Inventory</a></li>
+                    <li><a href="warehouse-shipments.html">Shipments</a></li>
+                    <li><a href="warehouse-employees.html">Manage Employees</a></li>
+                    <li><a href="warehouse-qc-reports.html">QC Reports</a></li>
+                    <li><a href="login.html" class="login-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Inventory Management Section -->
+    <section class="dashboard">
+        <h2>Manage Inventory</h2>
+        <button class="btn open-modal">Add Inventory Item</button>
+        <div class="dashboard-cards" id="inventory-container">
+            <!-- Dynamic Inventory Cards will be added here -->
+        </div>
+    </section>
+
+    <!-- Modal for Adding or Editing Inventory Items -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Add Inventory Item</h2>
+            <form id="inventoryForm">
+                <input type="hidden" id="itemIndex" name="itemIndex">
+                
+                <label for="itemName">Item Name:</label>
+                <input type="text" id="itemName" name="itemName" required>
+
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" required>
+
+                <label for="quantity">Quantity (units):</label>
+                <input type="number" id="quantity" name="quantity" required>
+
+                <label for="condition">Condition:</label>
+                <input type="text" id="condition" name="condition" required>
+
+                <label for="location">Location in Warehouse:</label>
+                <input type="text" id="location" name="location" required>
+
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="date" id="expiryDate" name="expiryDate">
+
+                <button type="button" class="submit-btn" id="saveItemBtn">Save Item</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Inventory Management System | For Warehouse Managers</p>
+    </footer>
+
+    <script src="warehouse-inventory.js"></script>
+</body>
+</html>

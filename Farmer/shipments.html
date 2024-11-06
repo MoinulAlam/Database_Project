@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard - Shipments</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-title">
+            <h1>Farmer Dashboard - Shipments</h1>
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="farmer-products.html">My Products</a></li>
+                    <li><a href="inventory.html">Inventory Contribution</a></li>
+                    <li><a href="contracts.html">Contracts</a></li>
+                    <li><a href="shipments.html">Shipments</a></li>
+                    <li><a href="/Home/index.html" class="login-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Shipments Section -->
+    <section class="dashboard">
+        <h2>Shipments</h2>
+        <button class="btn open-modal">Add New Shipment</button>
+        <div class="dashboard-cards" id="shipments-container">
+            <!-- Dynamic Shipment Cards will be added here -->
+        </div>
+    </section>
+
+    <!-- Modal for Adding or Editing Shipments -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Add New Shipment</h2>
+            <form id="shipmentForm">
+                <input type="hidden" id="shipmentIndex" name="shipmentIndex">
+                
+                <label for="shipmentName">Shipment Name:</label>
+                <input type="text" id="shipmentName" name="shipmentName" required>
+
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required>
+
+                <label for="date">Shipment Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="status">Status:</label>
+                <input type="text" id="status" name="status" required>
+
+                <button type="button" class="submit-btn" id="saveShipmentBtn">Save Shipment</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Inventory Management System | For Farmers</p>
+    </footer>
+
+    <script src="shipments-script.js"></script>
+</body>
+</html>
